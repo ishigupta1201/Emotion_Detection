@@ -105,10 +105,9 @@ while True:
                 h, w, _ = emoji.shape
                 x, y = 50, 100   # position on screen
 
-                # Check frame boundaries
                 if y + h < frame.shape[0] and x + w < frame.shape[1]:
 
-                    if emoji.shape[2] == 4:  # PNG with alpha
+                    if emoji.shape[2] == 4: 
                         alpha = emoji[:, :, 3] / 255.0
                         for c in range(3):
                             frame[y:y+h, x:x+w, c] = (
